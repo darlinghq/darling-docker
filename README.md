@@ -2,7 +2,7 @@
 
 This is the source code of the Darling Docker image. This is an experimental feature!
 
-Running desktop software under Docker has inherent challenges. It is up to you to ensure that the container can connect to X11, D-Bus etc.
+Running desktop software under Docker has inherent challenges. It is up to you to ensure that the container can connect to X11, D-Bus (-> PulseAudio) etc.
 
 ## Prerequisites
 
@@ -21,7 +21,6 @@ Starting a container:
 
 ```
 docker run -d --name darling1 darlinghq/darling:latest
-
 ```
 
 Now you have a container named `darling1` with `launchd` and various daemons running. You can drop into a shell:
