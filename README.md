@@ -32,7 +32,7 @@ docker exec -ti darling1 shell
 You can run various commands:
 
 ```
-docker exec -ti darling1 shell -c 'uname -a'
+docker exec darling1 shell -c 'uname -a'
 ```
 
 ## Technical Notes
