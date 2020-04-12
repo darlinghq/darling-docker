@@ -42,3 +42,10 @@ Darling uses a virtual chroot environment under `/usr/libexec/darling`:
 * If you bind a volume as `/somewhere`, it will be accessible as `/Volumes/SystemRoot/somewhere`.
 * If you bind a volume as `/usr/libexec/darling/somewhere`, it will appear as `/somewhere`.
 
+The base system of the image is Ubuntu. Therefore, if you do this, you will drop into a Linux shell, and NOT into the macOS shell:
+
+```
+docker exec -ti darling1 /bin/bash
+```
+
+macOS Bash lives as `/usr/libexec/darling/bin/bash`. The `shell` command used in above examples is just a convenience shortcut.
