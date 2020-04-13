@@ -21,10 +21,10 @@ RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y \
 	libavresample3 libavresample3:i386 \
 	libc6-i386 \
 	fuse \
-	wget && \
-	wget -O darling.deb ${DARLING_DEB} && \
-	dpkg -i darling.deb && rm -f darling .deb && apt-get remove -y wget && \
-	apt-get clean -y
+	wget && apt-get clean -y
+
+RUN	wget -O darling.deb ${DARLING_DEB} && \
+	dpkg -i darling.deb && rm -f darling .deb
 
 RUN mkdir -p /usr/libexec/darling/Users/macuser /home/macuser \
 	/usr/libexec/darling/Users/Shared \
