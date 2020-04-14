@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ARG DARLING_DEB=https://github.com/darlinghq/darling/releases/download/v0.1.20200331/darling_0.1.20200331.testing_amd64.deb
+ARG DARLING_DEB
 
 ADD darling-dkms_1.0_all.deb /root
 RUN dpkg -i /root/darling-dkms_1.0_all.deb && rm /root/darling-dkms_1.0_all.deb
