@@ -35,6 +35,20 @@ You can run various commands:
 docker exec darling1 shell -c 'uname -a'
 ```
 
+## Advanced
+
+### Experimental X11
+
+First of all, disable authorization on your X11 session by executing `xhost +`. Keeping the authorization enabled [is tricker](https://stackoverflow.com/a/25280523/479753).
+
+```
+docker run -d --name darling1 -e DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix -v /run/dbus:/run/dbus \
+    -v darlinghq/darling:latest
+```
+
+Whether this works or not depends mainly on the compatibility of OpenGL runtimes between the container and the host.
+
 ## Technical Notes
 
 Darling uses a virtual chroot environment under `/usr/libexec/darling`:
