@@ -39,7 +39,7 @@ docker exec darling1 shell -c 'uname -a'
 
 ### Experimental X11
 
-First of all, disable authorization on your X11 session by executing `xhost +`. Keeping the authorization enabled [is tricker](https://stackoverflow.com/a/25280523/479753).
+First of all, disable authorization on your X11 session by executing `xhost +`. Keeping the authorization enabled [is trickier](https://stackoverflow.com/a/25280523/479753).
 
 ```
 docker run -d --name darling1 -e DISPLAY \
