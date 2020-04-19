@@ -32,10 +32,13 @@ if not match:
 
 version = match.group(1)
 
-tag = "darlinghq/darling:v" + version
+# tag = "darlinghq/darling:v" + version
+# Until we have a script that deletes old images
+# E.g. from here https://gist.github.com/transcranial/be0f8f0d80e464f4032e
+tag = "docker.pkg.github.com/darlinghq/darling/darling:latest"
 
 subprocess.run(["docker", "build", "--build-arg", "DARLING_DEB=" + artifactUrl, "-t", tag, "."], check=True)
-subprocess.run(["docker", "tag", tag, "darlinghq/darling:latest"], check=True)
+#subprocess.run(["docker", "tag", tag, "darlinghq/darling:latest"], check=True)
 subprocess.run(["docker", "push", tag])
-subprocess.run(["docker", "push", "darlinghq/darling:latest"])
+#subprocess.run(["docker", "push", "darlinghq/darling:latest"])
 

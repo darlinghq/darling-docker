@@ -20,7 +20,7 @@ modprobe darling-mach
 Starting a container:
 
 ```
-docker run -d --name darling1 darlinghq/darling:latest
+docker run -d --name darling1 docker.pkg.github.com/darlinghq/darling/darling:latest
 ```
 
 Now you have a container named `darling1` with `launchd` and various daemons running. You can drop into a shell:
@@ -44,7 +44,7 @@ First of all, disable authorization on your X11 session by executing `xhost +`. 
 ```
 docker run -d --name darling1 -e DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix -v /run/dbus:/run/dbus \
-    -v darlinghq/darling:latest
+    -v docker.pkg.github.com/darlinghq/darling/darling:latest
 ```
 
 Whether this works or not depends mainly on the compatibility of OpenGL runtimes between the container and the host.
