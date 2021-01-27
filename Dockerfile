@@ -21,7 +21,7 @@ RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y \
 	libavresample4 libavresample4:i386 \
 	libdbus-1-3 libdbus-1-3:i386 \
 	libc6-i386 \
-	fuse \
+	fuse -o APT::Immediate-Configure=0 \
 	wget && apt-get clean -y
 
 RUN	wget -O darling.deb ${DARLING_DEB} && \
