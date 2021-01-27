@@ -16,9 +16,9 @@ RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y \
 	libxcursor1 libxcursor1:i386 \
 	libgif7 libgif7:i386 \
 	libpulse0 libpulse0:i386 \
-	libavformat57 libavformat57:i386 \
-	libavcodec57 libavcodec57:i386 \
-	libavresample3 libavresample3:i386 \
+	libavformat58 libavformat58:i386 \
+	libavcodec58 libavcodec58:i386 \
+	libavresample4 libavresample4:i386 \
 	libdbus-1-3 libdbus-1-3:i386 \
 	libc6-i386 \
 	fuse \
