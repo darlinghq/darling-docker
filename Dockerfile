@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:hirsute
 
 ARG DARLING_DEB
 
