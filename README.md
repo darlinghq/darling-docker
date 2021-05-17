@@ -37,6 +37,16 @@ docker exec darling1 shell -c 'uname -a'
 
 ## Advanced
 
+### Building
+
+You need to specify an URL that points to Darling's DEB file like this:
+
+```
+docker build --build-arg DARLING_DEB='http://172.17.0.1:7000/dist/darling_0.1.20210517~focal_amd64.deb' .
+```
+
+The latest experimental DEB file can be obtained from [darlinghq/darling 's build artifacts](https://github.com/darlinghq/darling/actions).
+
 ### Experimental X11
 
 First of all, disable authorization on your X11 session by executing `xhost +`. Keeping the authorization enabled [is trickier](https://stackoverflow.com/a/25280523/479753).
