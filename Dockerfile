@@ -8,6 +8,7 @@ RUN dpkg -i /root/darling-dkms_1.0_all.deb && rm /root/darling-dkms_1.0_all.deb
 RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y \
 	libcairo2 libcairo2:i386 \
 	libgl1 libgl1:i386 \
+	libglu1 libglu1:i386 \
 	libtiff5 libtiff5:i386 \
 	libfreetype6 libfreetype6:i386 \
 	libegl1-mesa libegl1-mesa:i386 \
@@ -20,6 +21,7 @@ RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y \
 	libavcodec58 libavcodec58:i386 \
 	libavresample4 libavresample4:i386 \
 	libdbus-1-3 libdbus-1-3:i386 \
+	libxkbfile1 libxkbfile1:i386 \
 	libc6-i386 \
 	fuse -o APT::Immediate-Configure=0 \
 	wget && apt-get clean -y
